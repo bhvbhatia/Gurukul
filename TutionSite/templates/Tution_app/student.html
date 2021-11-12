@@ -1,0 +1,208 @@
+{% extends 'Tution_app/base.html' %}
+{% load static %}
+{% block body %}
+<div class="jumbotron" id="fourjumb">
+
+  <div class="text-box">
+
+    <h1>Student Page</h1>
+
+    </p>
+    <a href="#" class="hero-btn">Visit Us To Know More</a>
+  </div>
+
+</div>
+
+<div class="jumbotron" id="tutor">
+
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputName"> Student Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Name">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="email">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputAddress2">D.O.B</label>
+      <input type="text" class="form-control" id="inputdob" placeholder="12/10/1998">
+    </div>
+  </div>
+  <div class="form-row">
+
+
+  <div class="form-group col-md-6">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="inputCity">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputZip">zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+</div>
+  <div class="form-row">
+
+    <div class="form-group col-md-6">
+      <label for="inputZip">Mobile</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="">Class</label>
+      <select class="custom-select">
+        <option selected>Select class</option>
+        <option value="1">1st</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="3">4th</option>
+        <option value="3">5th</option>
+        <option value="3">6th</option>
+        <option value="3">7th</option>
+        <option value="3">8th</option>
+        <option value="3">9th</option>
+        <option value="3">10th</option>
+        <option value="3">11th</option>
+        <option value="3">12th</option>
+        <option value="3">Hobby Classes</option>
+        <option value="3">Computer Courses</option>
+        <option value="3">Language/spoken</option>
+        <option value="3">others</option>
+       </select>
+      </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputSchool">School/College</label>
+      <input type="text" class="form-control" id="inputSchool" placeholder="">
+    </div>
+  <div class="form-group col-md-6">
+    <label for="">Board of School</label>
+    <select class="custom-select">
+      <option selected>Select</option>
+      <option value="1">CBSE</option>
+      <option value="2">ICSE</option>
+      <option value="3"> IB/IGCSE</option>
+     </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+  <div class="form-group col-md-6">
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-md-2 pt-0">Gender: </legend>
+      <div class="col-sm-9">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="form-group col-md-6">
+<fieldset class="form-group">
+  <div class="row">
+    <legend class="col-form-label col-sm pt-0">Teacher Preference: </legend>
+    <div class="col-sm-7">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+        <label class="form-check-label" for="gridRadios2">
+          Female
+        </label>
+      </div
+    </div>
+  </div>
+</fieldset>
+</div>
+</div>
+
+<div class="form-row">
+
+
+<div class="form-group col-md-6">
+  <label for="inputFather">Father's/Guardian's/Husband's Name</label>
+  <input type="text" class="form-control" id="inputFather" placeholder="">
+</div>
+<div class="form-group col-md-6">
+  <label for="inputMother">Mother's Name</label>
+  <input type="text" class="form-control" id="inputMother" placeholder="">
+</div>
+</div>
+
+<div class="form-row">
+
+
+<div class="form-group col-md-6">
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Student Image</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
+</div>
+<div class="form-group col-md-6">
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Id & Address Proof</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
+</div>
+
+
+</div>
+
+
+
+<div class="form-row">
+<div class="form-group col-md-6">
+<select class="custom-select">
+  <option selected>How you heard about us</option>
+  <option value="1">Facebook</option>
+  <option value="2">Instagram</option>
+  <option value="3">Linkedin</option>
+  <option value="4">Friends</option>
+  <option value="5">Advertisement</option>
+</select>
+</div>
+</div>
+
+<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">I agree with the <a href="#">Terms & Conditions</a>. </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+</form>
+</div>
+
+{% endblock %}

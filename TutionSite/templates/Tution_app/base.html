@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" type=text/css href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "/css/base.css" %}">
+    <link rel="stylesheet" href="{% static "/css/home.css" %}">
+    <link rel="stylesheet" href="{% static "/css/about.css" %}">
+    <link rel="stylesheet" href="{% static "/css/contact.css" %}">
+    <link rel="stylesheet" href="{% static "/css/student.css" %}">
+    <link rel="stylesheet" href="{% static "/css/tutor.css" %}">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="{% static "images/logo.png" %}"></a>
+        <p class="logo">Gurukul</p>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" id="cross" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="{% url 'Tution_app:home' %}">HOME</a></li>
+            <li><a href="{% url 'Tution_app:about' %}">ABOUT</a></li>
+            <li><a href="{% url 'Tution_app:tutor' %}">REGISTER AS A TUTOR</a></li>
+            <li><a href="{% url 'Tution_app:student' %}">JOIN AS A STUDENT</a></li>
+            <li><a href="{% url 'Tution_app:contact' %}">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+
+    </section>
+
+    {% block body %} {% endblock %}
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Gurukul</h4>
+            <ul>
+              <li><a href="{% url 'Tution_app:about' %}">About Us</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Tutor FAQ's</a></li>
+              <li><a href="#">Parents FAQ's</a></li>
+              <li><a href="#">Request a Tutor</a></li>
+              <li><a href="{% url 'Tution_app:tutor' %}">Register as Tutor</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get In Touch</h4>
+            <ul>
+              <p>707, Raja Park, Jaipur, <br>
+               302004, Rajasthan</p>
+              <li class="contact">Contact</li>
+              <li>Mobile: +91-9829218662, <br> +91-9587813413 <br> Whatsapp: +9587813413 <br> Email: info@gurukul.com</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook-f"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+
+            <div class="footer-col">
+              <h4>Join our Newsletter</h4>
+              <form class="lastform" action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div><br>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn">
+                  <button>Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        <p class="copyright"> © 2021 | GURUKUL Home Tuition | All Rights Reserved</p>
+    </footer>
+<!---JavaScript Toggle Menu----->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+    <script>
+
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+    </script>
+
+    {% block js %} {% endblock %}
+
+  </body>
